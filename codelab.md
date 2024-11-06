@@ -1,4 +1,6 @@
-# Guía para bastionar la BIOS/UEFI 
+author: Alejandro Díaz Barea
+summary: Confirgurar de forma segura BIOS/UEFI
+status: Published
 
 # Introducción
 
