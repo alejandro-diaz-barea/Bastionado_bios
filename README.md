@@ -1,10 +1,10 @@
 # Guía para bastionar la BIOS/UEFI 
 
-## Introducción
+# Introducción
 
 En esta guía aprenderás a configurar de forma segura la BIOS/UEFI de un ordenador. Dado que no pude acceder a la BIOS de mi máquina directamente, utilicé un emulador de BIOS de una máquina Lenovo Legion para completar los pasos. El objetivo es incrementar la seguridad del sistema mediante contraseñas, control de dispositivos de arranque, y activación de "Secure Boot".
 
-## Pasos para acceder a la BIOS
+# Pasos para acceder a la BIOS
 
 1. **Reinicia tu ordenador.**
 2. Mientras se enciende, presiona la tecla correspondiente para acceder a la BIOS/UEFI (generalmente `F2`, `F10`, `Delete` o `Esc` según el fabricante de tu equipo).
@@ -12,7 +12,7 @@ En esta guía aprenderás a configurar de forma segura la BIOS/UEFI de un ordena
 
 > **Nota:** En mi caso, no pude acceder directamente a la BIOS de mi dispositivo y, por lo tanto, utilicé un emulador de BIOS de Lenovo Legion.
 
-## Configuración de la contraseña de administrador
+# Configuración de la contraseña de administrador
 
 1. Una vez que estés en la bios, le darás a el boton de abajo a la derecha que se llama "More Setting" y accederas a el menú de configuración avanzada
 ![Menú BIOS](./images/menu_bios.png)
@@ -24,14 +24,14 @@ En esta guía aprenderás a configurar de forma segura la BIOS/UEFI de un ordena
 
 3. Confirma la contraseña y guarda los cambios presionando `F10`.
 
-## Configuración de la contraseña de disco duro (HDD Password)
+# Configuración de la contraseña de disco duro (HDD Password)
 
 1. Para proteger los datos en el disco duro, selecciona **HDD Password** en el menú **Security**.
 
 
 2. Ingresa una contraseña para el disco duro Esta medida asegura que si el disco es extraído, no podrá ser accedido sin la contraseña.
 
-## Otras opciones de seguridad disponibles
+# Otras opciones de seguridad disponibles
 
 Hay algunas configuraciones, el cual no necesitan mucha información y esas configuraciones son :
 
@@ -62,14 +62,14 @@ Hay algunas configuraciones, el cual no necesitan mucha información y esas conf
 
 
 
-## Activación del secure boot
+# Activación del secure boot
 
 1. Navega al menú **Boot** o **Security** y selecciona **Secure Boot**.
 2. Activa la opción **Secure Boot** para garantizar que el sistema solo arranque software firmado.
    
    ![Secure Boot Activado](./images/secure_boot_bios.png)
 
-## Guardar los cambios y salir
+# Guardar los cambios y salir
 
 1. Una vez que hayas configurado todas las opciones necesarias, presiona `F10` para guardar los cambios y salir.
    
@@ -79,7 +79,7 @@ Hay algunas configuraciones, el cual no necesitan mucha información y esas conf
 
 ---
 
-## Conclusión
+# Conclusión
 
 Siguiendo estos pasos, habrás configurado la BIOS/UEFI de tu equipo para que sea más segura, con contraseñas de protección y opciones de arranque restringidas. Este proceso asegura que tu equipo esté protegido frente a accesos no autorizados, tanto en el arranque como en el acceso físico a los datos.
 
