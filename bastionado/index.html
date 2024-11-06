@@ -1,0 +1,135 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Bastionado BIOS</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="bastionado"
+                  title="Bastionado BIOS"
+                  environment="web"
+                  feedback-link="https://github.com/alejandro-diaz-barea/Bastionado_bios/tree/main">
+    
+      <google-codelab-step label="Introducción" duration="0">
+        <p>En esta guía aprenderás a configurar de forma segura la BIOS/UEFI de un ordenador. Dado que no pude acceder a la BIOS de mi máquina directamente, utilicé un emulador de BIOS de una máquina Lenovo Legion para completar los pasos. El objetivo es incrementar la seguridad del sistema mediante contraseñas, control de dispositivos de arranque, y activación de &#34;Secure Boot&#34;.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Pasos para acceder a la BIOS" duration="0">
+        <ol type="1">
+<li><strong>Reinicia tu ordenador.</strong></li>
+<li>Mientras se enciende, presiona la tecla correspondiente para acceder a la BIOS/UEFI (generalmente <code>F2</code>, <code>F10</code>, <code>Delete</code> o <code>Esc</code> según el fabricante de tu equipo).</li>
+<li>Una vez dentro de la BIOS, utiliza las teclas de dirección para navegar por los menús.</li>
+</ol>
+<p><strong>Nota:</strong> En mi caso, no pude acceder directamente a la BIOS de mi dispositivo y, por lo tanto, utilicé un emulador de BIOS de Lenovo Legion.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configuración de la contraseña de administrador" duration="0">
+        <ol type="1">
+<li>Una vez que estés en la bios, le darás a el boton de abajo a la derecha que se llama &#34;More Setting&#34; y accederas a el menú de configuración avanzada <img alt="Menú BIOS" src="img/9dc70abde93dfbae.png"></li>
+<li>Navega al menú de <strong>Security</strong> y selecciona la opción <strong>Administrator Password</strong>. <img alt="Contraseña BIOS" src="img/55f2f718f9583c22.png"></li>
+<li>Introduce una nueva contraseña segura. Esta contraseña se solicitará para cualquier modificación en la BIOS.<img alt="Cambiar Contraseña Administrador" src="img/6666581e917c9d41.png"></li>
+<li>Confirma la contraseña y guarda los cambios presionando <code>F10</code>.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configuración de la contraseña de disco duro (HDD Password)" duration="0">
+        <ol type="1">
+<li>Para proteger los datos en el disco duro, selecciona <strong>HDD Password</strong> en el menú <strong>Security</strong>.</li>
+<li>Ingresa una contraseña para el disco duro Esta medida asegura que si el disco es extraído, no podrá ser accedido sin la contraseña.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Otras opciones de seguridad disponibles" duration="0">
+        <p>Hay algunas configuraciones, el cual no necesitan mucha información y esas configuraciones son :</p>
+<p class="image-container"><img alt="Opciones variadas de seguridad" src="img/8d796996c4eea58d.png"><img alt="Opciones variadas de seguridad" src="img/9762e2be6fcdbbf6.png"></p>
+<h2 is-upgraded><strong>Natural file guard</strong></h2>
+<ul>
+<li><strong>Enabled/Disabled</strong>: Si está activado, los discos duros no solicitarán la contraseña para continuar con el arranque del sistema operativo, pero se recomienda configurar la autenticación del usuario en el sistema operativo.</li>
+</ul>
+<h2 is-upgraded><strong>Security erase HDD1 Data</strong></h2>
+<ul>
+<li>Opcion para borrar de manera segura los datos del disco duro.</li>
+</ul>
+<h2 is-upgraded><strong>Set strong password</strong></h2>
+<ul>
+<li><strong>Enabled</strong>: Exige que las contraseñas de administrador, usuario y disco duro tengan al menos 8 caracteres, incluyan mayúsculas, minúsculas y números.</li>
+</ul>
+<h2 is-upgraded><strong>AMD Platform Security Processor</strong></h2>
+<ul>
+<li><strong>Enabled/Disabled</strong>: Controla el AMD PSP para gestionar la seguridad del hardware.</li>
+</ul>
+<h2 is-upgraded><strong>Pluton</strong></h2>
+<ul>
+<li><strong>Enabled/Disabled</strong>: Activa el módulo de seguridad de Microsoft.</li>
+</ul>
+<h2 is-upgraded><strong>Absolute Persistence® Module Activation</strong></h2>
+<ul>
+<li><strong>Enabled/Disabled/Permanently Disabled</strong>: Controla la activación del Absolute Persistence® Module para protección de software.</li>
+</ul>
+<h2 is-upgraded><strong>Device Guard</strong></h2>
+<ul>
+<li>Configura la función de <strong>Device Guard</strong> de Microsoft para mejorar la seguridad del dispositivo.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Activación del secure boot" duration="0">
+        <ol type="1">
+<li>Navega al menú <strong>Boot</strong> o <strong>Security</strong> y selecciona <strong>Secure Boot</strong>.</li>
+<li>Activa la opción <strong>Secure Boot</strong> para garantizar que el sistema solo arranque software firmado.<img alt="Secure Boot Activado" src="img/4740ba964cbfbdf7.png"></li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Guardar los cambios y salir" duration="0">
+        <ol type="1">
+<li>Una vez que hayas configurado todas las opciones necesarias, presiona <code>F10</code> para guardar los cambios y salir.<img alt="Salir y Guardar" src="img/4bfa4d5046f117d5.png"></li>
+<li>Confirma seleccionando <strong>Yes</strong> para aplicar las configuraciones.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Conclusión" duration="0">
+        <p>Siguiendo estos pasos, habrás configurado la BIOS/UEFI de tu equipo para que sea más segura, con contraseñas de protección y opciones de arranque restringidas. Este proceso asegura que tu equipo esté protegido frente a accesos no autorizados, tanto en el arranque como en el acceso físico a los datos.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

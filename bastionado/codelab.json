@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2024-11-06T19:58:34+01:00",
+  "id": "bastionado",
+  "duration": 0,
+  "title": "Bastionado BIOS",
+  "summary": "Confirgurar de forma segura BIOS/UEFI",
+  "source": "codelab.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "bios"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://github.com/alejandro-diaz-barea/Bastionado_bios/tree/main",
+  "url": "bastionado"
+}
